@@ -1,10 +1,3 @@
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
- */
-// exports.up = function(knex) {
-
-// };
 module.exports.up = (knex) =>
   knex.schema.createTable("reservations", (table) => {
     table.increments("id").unsigned().primary();
@@ -15,13 +8,5 @@ module.exports.up = (knex) =>
     table.string("phone");
     table.text("message");
   });
-
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
- */
-// exports.down = function(knex) {
-
-// };
 
 module.exports.down = (knex) => knex.schema.dropTable("reservations");
