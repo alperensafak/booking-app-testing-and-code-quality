@@ -1,16 +1,16 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
 
 const reservations = require("../lib/reservations");
 const Reservation = require("../lib/schema/reservation");
 
-router.get("/", function (req, res, next) {
+router.get("/", function (req, res) {
   reservations.fetch().then((reservations) => {
     res.status(200).json(reservations);
   });
 });
 
-router.post("/", function (req, res, next) {
+router.post("/", function (req, res) {
   const reservation = new Reservation(req.body);
   reservations
     .create(reservation)

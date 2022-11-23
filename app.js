@@ -5,9 +5,8 @@
 const express = require("express");
 const app = express();
 const reservations = require("./routes/reservations");
-var cookieParser = require("cookie-parser");
+const cookieParser = require("cookie-parser");
 
-const configuration = {};
 
 // /**
 //  * Get port and store in Express.
@@ -26,13 +25,13 @@ app.use("/reservations", reservations);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  var err = new Error("Not Found");
+  const err = new Error("Not Found");
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res, next) { // eslint-disable-line no-unused-vars
   // set locals, only providing error in test
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "test" ? err : {};

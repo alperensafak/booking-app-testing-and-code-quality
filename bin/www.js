@@ -4,29 +4,28 @@
  * Module dependencies.
  */
 
-var app = require("../app");
+const app = require("../app");
 
-var http = require("http");
+const http = require("http");
 
 /**
  * Get port and store in Express.
  */
 
-var port = 8000;
+const port = 8000;
 app.set("port", port);
 
 /**
  * Create HTTP server.
  */
 
-var server = http.createServer(app).listen(port, onListening);
+const server = http.createServer(app).listen(port, onListening);
 
 /**
  * Event listener for HTTP server "listening" event.
  */
 
 function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
- 
+  const addr = server.address();
+  const bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
 }
