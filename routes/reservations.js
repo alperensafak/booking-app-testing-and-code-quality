@@ -4,11 +4,6 @@ const router = express.Router();
 const reservations = require("../lib/reservations");
 const Reservation = require("../lib/schema/reservation");
 
-router.get("/", function (req, res) {
-  reservations.fetch().then((reservations) => {
-    res.status(200).json(reservations);
-  });
-});
 
 router.post("/", function (req, res) {
   const reservation = new Reservation(req.body);

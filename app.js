@@ -4,23 +4,22 @@
 
 const express = require("express");
 const app = express();
+const index = require('./routes/index');
+const admin = require("./routes/admin")
 const reservations = require("./routes/reservations");
 const cookieParser = require("cookie-parser");
+const auth = require('./lib/middleware/auth');
 
-
-// /**
-//  * Get port and store in Express.
-//  */
-// const port = 8000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.get("/", (req, res) => {
-  res.send("hello");
-});
 
+app.use("/",index)
+// Impenetrable security.
+app.use('/admin', auth('admin', 'admin'))
+app.use('/admin', admin);
 app.use("/reservations", reservations);
 
 // catch 404 and forward to error handler
