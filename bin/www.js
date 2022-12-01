@@ -5,8 +5,9 @@
  */
 
 const app = require("../app");
-
-const http = require("http");
+const debug = require('debug')('bookingApp:server')
+const http = require('http')
+//const name = 'bookingApp';
 
 /**
  * Get port and store in Express.
@@ -19,13 +20,18 @@ app.set("port", port);
  * Create HTTP server.
  */
 
-const server = http.createServer(app).listen(port, onListening);
+ const server = http.createServer(app)
+ .listen(port, onListening);
+
 
 /**
  * Event listener for HTTP server "listening" event.
  */
 
 function onListening() {
-  const addr = server.address();
-  const bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port; // eslint-disable-line no-unused-vars
-}
+    const addr = server.address();
+    const bind = typeof addr === 'string'
+      ? 'pipe ' + addr
+      : 'port ' + addr.port;
+    debug('Listening on ' + bind);
+  }
