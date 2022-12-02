@@ -5,7 +5,7 @@
  */
 
 const app = require("../app");
-const debug = require('debug')('bookingApp:server')
+const debug = require('debug')('booking-app:server')
 const http = require('http')
 //const name = 'bookingApp';
 

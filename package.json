@@ -1,11 +1,11 @@
 {
-    "name": "booking-app-testing-and-code-quality",
+    "name": "booking-app",
     "version": "1.0.0",
     "description": "Restaurant booking application with testing and code quality.",
     "main": "bin/www",
     "scripts": {
-        "debug": "cross-env DEBUG=bookingApp:* nodemon",
-        "start": "nodemon bin/www",
+        "debug": "cross-env DEBUG=booking-app:* nodemon",
+        "start": "nodemon bin/www.js",
         "test": "jest"
     },
     "keywords": [],

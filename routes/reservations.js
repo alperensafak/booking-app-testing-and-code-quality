@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const debug = require("debug")("bookingApp:route:reservations");
+const debug = require("debug")("booking-app:route:reservations");
 const reservations = require("../lib/reservations");
 const Reservation = require("../lib/schema/reservation");
 

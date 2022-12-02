@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const reservations = require("../lib/reservations");
-const debug = require('debug')('bookingApp:route:admin') // eslint-disable-line no-unused-vars
+const debug = require('debug')('booking-app:route:admin') // eslint-disable-line no-unused-vars
 
 
 /* GET admin listing. */
