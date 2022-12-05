@@ -3,14 +3,28 @@
  */
 
 const express = require("express");
-const app = express();
 const index = require('./routes/index');
 const admin = require("./routes/admin")
 const reservations = require("./routes/reservations");
 const cookieParser = require("cookie-parser");
 const auth = require('./lib/middleware/auth');
+const logger = require ('morgan')
+const favicon = require('serve-favicon');
+const path = require('path');
 
+const app = express();
 
+// Static assets.
+// Move this after the logger if you want to log requests for static assets.
+// Uncomment when you've added a favicon to your project.
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(express.static(path.join(__dirname, 'public')));
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

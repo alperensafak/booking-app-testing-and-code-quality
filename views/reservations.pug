@@ -1,0 +1,65 @@
+doctype html
+html.no-js(lang='en-US')
+  head
+    title Reservations
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='dns-prefetch', href='//fonts.googleapis.com/')
+    link#genericons-css(rel='stylesheet', href='/contrib/css/genericons/genericons.css')
+    link#wm-google-fonts-css(rel='stylesheet', href='//fonts.googleapis.com/css?family=Playfair+Display%7CDroid+Serif&subset&ver=2.2.0')
+    link#wm-main-css(rel='stylesheet', href='/contrib/css/main.css')
+    link(rel='stylesheet', href='/css/style.css')
+    link#wm-stylesheet-css(rel='stylesheet', href='/contrib/css/style.css')
+    script(src='/contrib/js/jquery/jquery.js')
+  body#top.has-post-thumbnail.is-singular.not-front-page.page.page-id-10.page-template-default
+    #page.hfeed.site
+      header#masthead.site-header(role='banner', itemscope='', itemtype='https://schema.org/WPHeader')
+        .site-header-inner
+          .site-branding
+            h2.screen-reader-text Reservations 
+            a#site-title.site-title.logo.type-text(href='/', title="Reservation App", rel='home')
+              span.text-logo Reservation App
+          nav#site-navigation.main-navigation(role='navigation', aria-labelledby='site-navigation-label', itemscope='', itemtype='https://schema.org/SiteNavigationElement')
+            h2#site-navigation-label.screen-reader-text Primary Menu
+            #main-navigation-inner.main-navigation-inner
+              .menu
+                ul
+                  li#menu-item-75.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-75
+                    a(href='/') Home
+                  li#menu-item-76.menu-item.menu-item-type-post_type.menu-item-object-page.current-menu-item.page_item.page-item-10.current_page_item.menu-item-76.active-menu-item
+                    a(href='reservations') Reservations
+            button#menu-toggle.menu-toggle(aria-controls='site-navigation', aria-expanded='false') Menu
+      #content.site-content
+        #primary.content-area
+          main#main.site-main.clearfix(role='main', itemprop='mainContentOfPage')
+            article#post-10.post-10.page.type-page.status-publish.has-post-thumbnail.hentry.entry(role='article', itemscope='', itemtype='https://schema.org/WebPage')
+              meta(itemscope='', itemprop='mainEntityOfPage', itemtype='https://schema.org/WebPage')
+              
+              header.entry-header
+                h1.entry-title(itemprop='headline') Reservations
+              .entry-content(itemprop='description')
+                
+                p
+                  | We can host your large private or corporate party! For more information about reserving space for events of 40 people or more, call, fill out or contact form, or come visit us in person.
+
+                include reservationForm
+
+            // /#main
+        // /#primary
+      // /#content
+      
+    // /#page
+    link#rtb-booking-form-css(rel='stylesheet', href='/contrib/css/booking-form.css')
+    link#pickadate-default-css(rel='stylesheet', href='/contrib/css/pickadate/default.css')
+    link#pickadate-date-css(rel='stylesheet', href='/contrib/css/pickadate/default.date.css')
+    link#pickadate-time-css(rel='stylesheet', href='/contrib/css/pickadate/default.time.css')
+    script(src='/contrib/js/imagesloaded.min.js')
+    script(src='/contrib/js/scripts-global.js')
+    script(src='/contrib/js/skip-link-focus-fix.js')
+    script(src='/contrib/js/pickadate/picker.js')
+    script(src='/contrib/js/pickadate/picker.date.js')
+    script(src='/contrib/js/pickadate/picker.time.js')
+    script(src='/contrib/js/pickadate/legacy.js')
+    script(src='/js/reservations.js')
+    script(src='/contrib/js/scripts-navigation.js')
+    script(src='/contrib/js/booking-form.js')

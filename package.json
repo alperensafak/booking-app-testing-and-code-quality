@@ -6,7 +6,7 @@
     "scripts": {
         "debug": "cross-env DEBUG=booking-app:* nodemon",
         "start": "nodemon bin/www.js",
-        "test": "jest"
+        "test": "jest --coverage"
     },
     "keywords": [],
     "author": "",
@@ -19,13 +19,18 @@
         "joi": "^17.7.0",
         "jsdoc": "^4.0.0",
         "knex": "^2.3.0",
+        "lodash": "^4.17.21",
         "moment": "^2.29.4",
+        "morgan": "^1.10.0",
+        "pug": "^3.0.2",
+        "serve-favicon": "^2.5.0",
         "sqlite3": "^5.1.2"
     },
     "devDependencies": {
         "cross-env": "^7.0.3",
         "eslint": "^8.28.0",
         "jest": "^29.3.1",
-        "nodemon": "^2.0.20"
+        "nodemon": "^2.0.20",
+        "supertest": "^6.3.2"
     }
 }
